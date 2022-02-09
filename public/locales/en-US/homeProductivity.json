@@ -1,0 +1,18 @@
+{
+	"title": "Your personal calendar assistant <br /> <strong>save more time and productivity</strong>",
+	"button": "Create my account now",
+	"features": {
+		"availability": {
+			"title": "Set your availability",
+			"description": "You define when and how the schedules of your schedule will be made available, privately."
+		},
+		"link": {
+			"title": "Share the link",
+			"description": "You share a secure link so people can only see the times that are available."
+		},
+		"events": {
+			"title": "Have events scheduled",
+			"description": "Events are scheduled and organized so you don't have to worry about schedule overlaps."
+		}
+	}
+}

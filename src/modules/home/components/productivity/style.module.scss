@@ -1,0 +1,52 @@
+.productivity {
+	@apply w-full flex justify-center items-center flex-col py-24;
+	&-title {
+		@apply w-full mb-20;
+		@apply text-center;
+		font-size: calc(1.875rem + ((1vw - 7.68px) * 1.7361));
+		@media (min-width: theme('screens.2xl')) {
+			@apply text-5xl;
+		}
+		@media (max-width: theme('screens.sm')) {
+			br {
+				@apply hidden;
+			}
+		}
+	}
+	&-btn {
+		@apply flex justify-center items-center transition-all px-6 py-3;
+		@apply rounded-lg border border-rose-500;
+		@apply font-bold text-center text-base text-white;
+		@apply bg-rose-500;
+		&:hover {
+			@apply border-rose-400;
+			@apply bg-rose-400;
+		}
+	}
+	&-features-list {
+		@apply w-full flex justify-between items-start mt-28;
+		&-feature {
+			@apply w-full flex justify-start items-center flex-col px-2;
+			@apply text-center;
+			.image {
+				@apply max-h-32 h-full w-auto;
+			}
+			.title {
+				@apply my-5;
+				@apply text-base font-bold;
+			}
+			.description {
+				@apply text-sm;
+			}
+		}
+		@media (max-width: theme('screens.sm')) {
+			@apply flex-wrap;
+			&-feature {
+				@apply p-0;
+				&:not(:last-child) {
+					@apply mb-14;
+				}
+			}
+		}
+	}
+}

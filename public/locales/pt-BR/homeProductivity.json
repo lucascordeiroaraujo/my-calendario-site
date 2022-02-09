@@ -1,0 +1,18 @@
+{
+	"title": "O seu assistente pessoal de calendário <br /> <strong>ganhe mais tempo e produtividade</strong>",
+	"button": "Criar minha conta agora",
+	"features": {
+		"availability": {
+			"title": "Defina sua disponibilidade",
+			"description": "Você define quando e como serão disponibilizados os horários da sua agenda, de forma privativa."
+		},
+		"link": {
+			"title": "Compartilhe o link",
+			"description": "Você compartilha um link seguro para as pessoas visualizarem apenas os horários que estão disponíveis."
+		},
+		"events": {
+			"title": "Tenha eventos agendados",
+			"description": "Os eventos são agendados e organizados para que você não tenha que se preocupar com sobreposições de agenda."
+		}
+	}
+}
