@@ -1,0 +1,18 @@
+{
+	"title": "Get started today and stop <strong>suffering with appointments</strong>",
+	"description": "We know how difficult it is to reconcile schedules, especially in a complex environment where people are working remotely. But scheduling your meetings doesn't have to be a pain. Now you can solve the problem with a simple tool.",
+	"articles": [
+		{
+			"title": "Meetings the way you need them",
+			"description": "Define when and how meetings can be scheduled."
+		},
+		{
+			"title": "Invite whoever you want",
+			"description": "Share your schedule securely with multiple people."
+		}
+	],
+	"createAccount": {
+		"title": "Access registration page",
+		"text": "Create my account now"
+	}
+}

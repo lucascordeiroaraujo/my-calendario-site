@@ -29,7 +29,7 @@
 			@apply w-full flex justify-start items-center flex-col px-2;
 			@apply text-center;
 			.image {
-				@apply max-h-32 h-full w-auto;
+				@apply h-32 w-auto;
 			}
 			.title {
 				@apply my-5;

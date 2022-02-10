@@ -1,0 +1,18 @@
+{
+	"title": "Comece hoje mesmo e pare de <strong>sofrer com agendamentos</strong>",
+	"description": "A gente sabe como é difícil conciliar agendas, ainda mais num ambiente complexo onde as pessoas estão trabalhando remotamente. Mas agendar suas reuniões não precisa ser um tormento. Agora você pode resolver o problema com uma ferramenta simples.",
+	"articles": [
+		{
+			"title": "Reuniões do jeito que você precisa",
+			"description": "Defina quando e como as reuniões poderão ser agendadas."
+		},
+		{
+			"title": "Convide quem você quiser",
+			"description": "Compartilhe a sua agenda de forma segura com diversas pessoas."
+		}
+	],
+	"createAccount": {
+		"title": "Acessar página de cadastro",
+		"text": "Criar minha conta agora"
+	}
+}

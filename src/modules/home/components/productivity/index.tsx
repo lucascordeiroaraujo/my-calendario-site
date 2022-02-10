@@ -1,5 +1,9 @@
 import React, { ReactElement } from 'react';
 
+import Fade from 'react-reveal/Fade';
+
+import Tada from 'react-reveal/Tada';
+
 import { useTranslation } from 'next-i18next';
 
 import styles from './style.module.scss';
@@ -10,58 +14,78 @@ export function ProductivityComponent(): ReactElement {
 	return (
 		<div className="site-container">
 			<section className={styles.productivity}>
-				<h1
-					className={styles['productivity-title']}
-					dangerouslySetInnerHTML={{ __html: t('title') }}
-				/>
+				<Fade bottom>
+					<h1
+						className={styles['productivity-title']}
+						dangerouslySetInnerHTML={{ __html: t('title') }}
+					/>
+				</Fade>
 
-				<button className={styles['productivity-btn']}>{t('button')}</button>
+				<Tada>
+					<a
+						href={(process.env.NEXT_APP_URL as string) || ''}
+						title={t('button')}
+						target="_blank"
+						rel="noopener noreferrer"
+						className={styles['productivity-btn']}
+					>
+						{t('button')}
+					</a>
+				</Tada>
 
 				<div className={styles['productivity-features-list']}>
-					<article className={styles['productivity-features-list-feature']}>
-						<img
-							src="/images/ilustrations/productivity/availability.svg"
-							alt={t('features.availability.title')}
-							title={t('features.availability.title')}
-							className={styles.image}
-						/>
+					<Fade delay={100}>
+						<article className={styles['productivity-features-list-feature']}>
+							<img
+								src="/images/ilustrations/productivity/availability.svg"
+								alt={t('features.availability.title')}
+								title={t('features.availability.title')}
+								className={styles.image}
+							/>
 
-						<h1 className={styles.title}>{t('features.availability.title')}</h1>
+							<h1 className={styles.title}>
+								{t('features.availability.title')}
+							</h1>
 
-						<p className={styles.description}>
-							{t('features.availability.description')}
-						</p>
-					</article>
+							<p className={styles.description}>
+								{t('features.availability.description')}
+							</p>
+						</article>
+					</Fade>
 
-					<article className={styles['productivity-features-list-feature']}>
-						<img
-							src="/images/ilustrations/productivity/link.svg"
-							alt={t('features.link.title')}
-							title={t('features.link.title')}
-							className={styles.image}
-						/>
+					<Fade delay={200}>
+						<article className={styles['productivity-features-list-feature']}>
+							<img
+								src="/images/ilustrations/productivity/link.svg"
+								alt={t('features.link.title')}
+								title={t('features.link.title')}
+								className={styles.image}
+							/>
 
-						<h1 className={styles.title}>{t('features.link.title')}</h1>
+							<h1 className={styles.title}>{t('features.link.title')}</h1>
 
-						<p className={styles.description}>
-							{t('features.link.description')}
-						</p>
-					</article>
+							<p className={styles.description}>
+								{t('features.link.description')}
+							</p>
+						</article>
+					</Fade>
 
-					<article className={styles['productivity-features-list-feature']}>
-						<img
-							src="/images/ilustrations/productivity/events.svg"
-							alt={t('features.events.title')}
-							title={t('features.events.title')}
-							className={styles.image}
-						/>
+					<Fade delay={300}>
+						<article className={styles['productivity-features-list-feature']}>
+							<img
+								src="/images/ilustrations/productivity/events.svg"
+								alt={t('features.events.title')}
+								title={t('features.events.title')}
+								className={styles.image}
+							/>
 
-						<h1 className={styles.title}>{t('features.events.title')}</h1>
+							<h1 className={styles.title}>{t('features.events.title')}</h1>
 
-						<p className={styles.description}>
-							{t('features.events.description')}
-						</p>
-					</article>
+							<p className={styles.description}>
+								{t('features.events.description')}
+							</p>
+						</article>
+					</Fade>
 				</div>
 			</section>
 		</div>
