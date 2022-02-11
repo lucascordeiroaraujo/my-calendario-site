@@ -6,19 +6,39 @@ import { useTranslation } from 'next-i18next';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
+import dynamic from 'next/dynamic';
+
 import Head from 'next/head';
 
-import { FooterComponent } from '~/components/footer';
-
-import { HeaderComponent } from '~/components/header';
-
-import { ComplexComponent } from '~/modules/home/components/complex';
-
-import { ProductivityComponent } from '~/modules/home/components/productivity';
-
-import { SchedulesComponent } from '~/modules/home/components/schedules';
+import { HeaderComponent as HeaderComponentType } from '~/components/header';
 
 import { authGetGoogleAuthUrl } from '~/modules/home/services/get-google-url.service';
+
+const FooterComponent = dynamic(() =>
+	import('~/components/footer').then(lib => lib.FooterComponent as any)
+);
+
+const HeaderComponent = dynamic(() =>
+	import('~/components/header').then(lib => lib.HeaderComponent as any)
+) as typeof HeaderComponentType;
+
+const ComplexComponent = dynamic(() =>
+	import('~/modules/home/components/complex').then(
+		lib => lib.ComplexComponent as any
+	)
+);
+
+const ProductivityComponent = dynamic(() =>
+	import('~/modules/home/components/productivity').then(
+		lib => lib.ProductivityComponent as any
+	)
+);
+
+const SchedulesComponent = dynamic(() =>
+	import('~/modules/home/components/schedules').then(
+		lib => lib.SchedulesComponent as any
+	)
+);
 
 export default function IndexPage({
 	googleAuthUrl,
