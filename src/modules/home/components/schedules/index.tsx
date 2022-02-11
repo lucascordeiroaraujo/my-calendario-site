@@ -22,6 +22,8 @@ export function SchedulesComponent(): ReactElement {
 					alt={t('title')}
 					title={t('title')}
 					className={styles['schedules-ilustration']}
+					width="283"
+					height="400"
 				/>
 
 				<div className={styles['schedules-info-container']}>

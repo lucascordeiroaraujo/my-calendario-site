@@ -56,6 +56,8 @@ export function ComplexComponent(): ReactElement {
 					alt={t('title')}
 					title={t('title')}
 					className={styles['complex-ilustration']}
+					width="437"
+					height="346"
 				/>
 			</div>
 		</section>

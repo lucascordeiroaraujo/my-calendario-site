@@ -41,6 +41,8 @@ export function ProductivityComponent(): ReactElement {
 								alt={t('features.availability.title')}
 								title={t('features.availability.title')}
 								className={styles.image}
+								width="117"
+								height="128"
 							/>
 
 							<h1 className={styles.title}>
@@ -60,6 +62,8 @@ export function ProductivityComponent(): ReactElement {
 								alt={t('features.link.title')}
 								title={t('features.link.title')}
 								className={styles.image}
+								width="91"
+								height="128"
 							/>
 
 							<h1 className={styles.title}>{t('features.link.title')}</h1>
@@ -77,6 +81,8 @@ export function ProductivityComponent(): ReactElement {
 								alt={t('features.events.title')}
 								title={t('features.events.title')}
 								className={styles.image}
+								width="136"
+								height="128"
 							/>
 
 							<h1 className={styles.title}>{t('features.events.title')}</h1>

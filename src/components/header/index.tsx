@@ -30,6 +30,8 @@ export function HeaderComponent({ googleAuthUrl }: IHeaderProps): ReactElement {
 								alt={t('siteName')}
 								title={t('siteName')}
 								className={styles['site-header-logo']}
+								width="217"
+								height="31"
 							/>
 						</a>
 					</Link>
