@@ -14,63 +14,47 @@
 	@apply bg-gray-50;
 	&-container {
 		@apply flex justify-between;
-		.ilustration {
-			@apply w-1/4 mr-8;
-			animation: float 6s ease-in-out infinite;
-			@media (max-width: theme('screens.md')) {
-				@apply hidden;
-			}
+		@media (max-width: theme('screens.md')) {
+			@apply flex-col items-center;
 		}
-		.info-container {
-			@apply w-full max-w-2xl flex-1 flex flex-col;
-			&-title {
-				@apply text-4xl;
-			}
-			&-separator {
-				@apply w-20 h-0.5 my-8;
-				@apply bg-gray-900;
-			}
-			&-description {
-				@apply text-sm;
-			}
-			&-features {
-				@apply w-full mt-14 flex flex-wrap;
-				&-article {
-					@apply flex flex-col w-1/2 pr-5;
-					.title {
-						@apply mb-4;
-						@apply font-bold;
-					}
-					.description {
-						@apply text-sm;
-					}
-					@media (max-width: theme('screens.md')) {
-						@apply w-full pr-0;
-						&:not(:last-child) {
-							@apply mb-8;
-						}
+	}
+	&-ilustration {
+		@apply w-1/4 mr-8;
+		animation: float 6s ease-in-out infinite;
+		@media (max-width: theme('screens.md')) {
+			@apply hidden;
+		}
+	}
+	&-info-container {
+		@apply w-full max-w-2xl flex-1 flex flex-col;
+		&-title {
+			@apply text-4xl;
+		}
+		&-separator {
+			@apply w-20 h-0.5 my-8;
+			@apply bg-gray-900;
+		}
+		&-features {
+			@apply w-full mt-14 flex flex-wrap;
+			&-article {
+				@apply flex flex-col w-1/2 pr-5;
+				.title {
+					@apply mb-4;
+					@apply font-bold;
+				}
+				.description {
+					@apply text-sm;
+				}
+				@media (max-width: theme('screens.md')) {
+					@apply w-full pr-0;
+					&:not(:last-child) {
+						@apply mb-8;
 					}
 				}
-			}
-			&-create-account-container {
-				@apply w-full flex justify-center items-center;
-				.create-account {
-					@apply flex justify-center items-center transition-all px-6 py-3 mt-16;
-					@apply rounded-lg border border-rose-500;
-					@apply font-bold text-center text-base text-white;
-					@apply bg-rose-500;
-					&:hover {
-						@apply border-rose-400;
-						@apply bg-rose-400;
-					}
-				}
-			}
-			@media (max-width: theme('screens.md')) {
-				@apply items-center text-center;
 			}
 		}
 		@media (max-width: theme('screens.md')) {
-			@apply flex-col items-center;
+			@apply items-center text-center;
 		}
 	}
 	@media (max-width: theme('screens.md')) {

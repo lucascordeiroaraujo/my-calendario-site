@@ -8,8 +8,16 @@ import Link from 'next/link';
 
 import styles from './style.module.scss';
 
-export function HeaderComponent(): ReactElement {
+interface IHeaderProps {
+	googleAuthUrl: string;
+}
+
+export function HeaderComponent({ googleAuthUrl }: IHeaderProps): ReactElement {
 	const { t } = useTranslation('common');
+
+	const handleRedirectToLogin = (): void => {
+		window.location.href = googleAuthUrl;
+	};
 
 	return (
 		<div className="site-container">
@@ -26,6 +34,14 @@ export function HeaderComponent(): ReactElement {
 						</a>
 					</Link>
 				</Fade>
+
+				<ul className={styles['site-header-menu']}>
+					<li className={styles['site-header-menu-item']}>
+						<button onClick={handleRedirectToLogin} className={styles.login}>
+							Login
+						</button>
+					</li>
+				</ul>
 			</header>
 		</div>
 	);
