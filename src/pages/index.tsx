@@ -8,6 +8,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Head from 'next/head';
 
+import { FooterComponent } from '~/components/footer';
+
 import { HeaderComponent } from '~/components/header';
 
 import { ComplexComponent } from '~/modules/home/components/complex';
@@ -38,6 +40,8 @@ export default function IndexPage({
 			<SchedulesComponent />
 
 			<ComplexComponent />
+
+			<FooterComponent />
 		</>
 	);
 }
