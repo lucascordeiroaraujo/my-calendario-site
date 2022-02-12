@@ -10,9 +10,5 @@
 			"title": "Invite whoever you want",
 			"description": "Share your schedule securely with multiple people."
 		}
-	],
-	"createAccount": {
-		"title": "Access registration page",
-		"text": "Create my account now"
-	}
+	]
 }

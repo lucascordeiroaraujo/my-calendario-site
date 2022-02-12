@@ -4,6 +4,8 @@ import Fade from 'react-reveal/Fade';
 
 import { useTranslation } from 'next-i18next';
 
+import { SectionDescriptionComponent } from '~/modules/home/components/section-description';
+
 import styles from './style.module.scss';
 
 export function SchedulesComponent(): ReactElement {
@@ -26,31 +28,16 @@ export function SchedulesComponent(): ReactElement {
 					height="400"
 				/>
 
-				<div className={styles['schedules-info-container']}>
-					<Fade bottom>
-						<h1
-							className={styles['schedules-info-container-title']}
-							dangerouslySetInnerHTML={{ __html: t('title') }}
-						/>
-					</Fade>
-
-					<Fade bottom delay={100}>
-						<span className={styles['schedules-info-container-separator']} />
-					</Fade>
-
-					<Fade bottom delay={200}>
-						<p>{t('description')}</p>
-					</Fade>
-
+				<SectionDescriptionComponent
+					title={t('title')}
+					description={t('description')}
+					theme="dark"
+				>
 					<Fade delay={300}>
-						<div className={styles['schedules-info-container-features']}>
+						<div className={styles['schedules-features']}>
 							{i18nEvents().map((item, index) => (
 								<Fade key={item.title} delay={parseInt(`${index}00`, 10)}>
-									<article
-										className={
-											styles['schedules-info-container-features-article']
-										}
-									>
+									<article className={styles['schedules-features-article']}>
 										<h1 className={styles.title}>{item.title}</h1>
 
 										<p className={styles.description}>{item.description}</p>
@@ -59,7 +46,7 @@ export function SchedulesComponent(): ReactElement {
 							))}
 						</div>
 					</Fade>
-				</div>
+				</SectionDescriptionComponent>
 			</div>
 		</section>
 	);

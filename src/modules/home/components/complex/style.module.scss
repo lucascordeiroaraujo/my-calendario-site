@@ -10,35 +10,6 @@
 			@apply hidden;
 		}
 	}
-	&-info-container {
-		@apply flex flex-col;
-		&-title {
-			@apply text-4xl text-white;
-		}
-		&-separator {
-			@apply w-20 h-0.5 my-8;
-			@apply bg-white;
-		}
-		&-description {
-			@apply text-white;
-		}
-		&-create-account-container {
-			@apply w-full flex justify-center items-center;
-			.create-account {
-				@apply flex justify-center items-center transition-all px-6 py-3 mt-16;
-				@apply rounded-lg border border-rose-500;
-				@apply font-bold text-center text-base text-rose-500;
-				@apply bg-white;
-				&:hover {
-					@apply border-rose-400;
-					@apply bg-gray-100;
-				}
-			}
-		}
-		@media (max-width: theme('screens.md')) {
-			@apply items-center text-center;
-		}
-	}
 	@media (max-width: theme('screens.md')) {
 		@apply py-16;
 	}

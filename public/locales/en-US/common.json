@@ -1,4 +1,8 @@
 {
 	"siteName": "myCalendário",
-	"homePageTitle": "Home page"
+	"homePageTitle": "Home page",
+	"createAccount": {
+		"title": "Access registration page",
+		"text": "Create my account now"
+	}
 }

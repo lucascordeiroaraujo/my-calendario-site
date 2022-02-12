@@ -1,0 +1,50 @@
+.info-container {
+	@apply w-full max-w-2xl flex-1 flex flex-col;
+	&-title {
+		@apply text-4xl;
+	}
+	&-separator {
+		@apply w-20 h-0.5 my-8;
+	}
+	&-create-account-container {
+		@apply w-full flex justify-center items-center;
+		.create-account {
+			@apply flex justify-center items-center transition-all px-6 py-3 mt-16;
+			@apply rounded-lg border;
+			@apply font-bold text-center text-base;
+		}
+	}
+	&.theme-light {
+		@apply text-white;
+		.info-container-separator {
+			@apply bg-white;
+		}
+		.create-account {
+			@apply border-rose-500;
+			@apply text-rose-500;
+			@apply bg-white;
+			&:hover {
+				@apply border-rose-400;
+				@apply bg-gray-100;
+			}
+		}
+	}
+	&.theme-dark {
+		@apply text-gray-900;
+		.info-container-separator {
+			@apply bg-gray-900;
+		}
+		.create-account {
+			@apply border-rose-500;
+			@apply text-white;
+			@apply bg-rose-500;
+			&:hover {
+				@apply border-rose-400;
+				@apply bg-rose-400;
+			}
+		}
+	}
+	@media (max-width: theme('screens.md')) {
+		@apply items-center text-center;
+	}
+}

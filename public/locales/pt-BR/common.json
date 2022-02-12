@@ -1,4 +1,8 @@
 {
 	"siteName": "myCalendário",
-	"homePageTitle": "Página inicial"
+	"homePageTitle": "Página inicial",
+	"createAccount": {
+		"title": "Acessar página de cadastro",
+		"text": "Criar minha conta agora"
+	}
 }

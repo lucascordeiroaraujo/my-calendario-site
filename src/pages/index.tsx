@@ -40,6 +40,12 @@ const SchedulesComponent = dynamic(() =>
 	)
 );
 
+const ShareComponent = dynamic(() =>
+	import('~/modules/home/components/share').then(
+		lib => lib.ShareComponent as any
+	)
+);
+
 export default function IndexPage({
 	googleAuthUrl,
 }: {
@@ -61,6 +67,8 @@ export default function IndexPage({
 
 			<ComplexComponent />
 
+			<ShareComponent />
+
 			<FooterComponent />
 		</>
 	);
@@ -80,6 +88,7 @@ export const getStaticProps: GetStaticProps = async ({
 				'homeProductivity',
 				'homeSchedules',
 				'homeComplex',
+				'homeShare',
 			])),
 		},
 		revalidate: 10,
