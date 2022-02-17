@@ -4,5 +4,8 @@
 	"createAccount": {
 		"title": "Acessar página de cadastro",
 		"text": "Criar minha conta agora"
+	},
+	"footer": {
+		"privacyPolicy": "Política de Privacidade"
 	}
 }

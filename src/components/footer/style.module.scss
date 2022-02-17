@@ -1,3 +1,9 @@
 .site-footer {
-	@apply flex justify-center pt-20 pb-5;
+	@apply flex flex-col items-center pt-20 pb-5 text-center gap-1;
+	a {
+		@apply text-rose-500;
+		&:hover {
+			@apply underline;
+		}
+	}
 }

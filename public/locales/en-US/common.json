@@ -4,5 +4,8 @@
 	"createAccount": {
 		"title": "Access registration page",
 		"text": "Create my account now"
+	},
+	"footer": {
+		"privacyPolicy": "Privacy Policy"
 	}
 }

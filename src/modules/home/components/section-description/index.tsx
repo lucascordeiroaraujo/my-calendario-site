@@ -55,8 +55,6 @@ export function SectionDescriptionComponent({
 						<a
 							href={(process.env.NEXT_APP_URL as string) || ''}
 							title={t('createAccount.title')}
-							target="_blank"
-							rel="noopener noreferrer"
 							className={styles['create-account']}
 						>
 							{t('createAccount.text')}

@@ -9,14 +9,14 @@ import Link from 'next/link';
 import styles from './style.module.scss';
 
 interface IHeaderProps {
-	googleAuthUrl: string;
+	googleAuthUrl?: string;
 }
 
 export function HeaderComponent({ googleAuthUrl }: IHeaderProps): ReactElement {
 	const { t } = useTranslation('common');
 
 	const handleRedirectToLogin = (): void => {
-		window.location.href = googleAuthUrl;
+		window.location.href = googleAuthUrl || '/';
 	};
 
 	return (
@@ -38,11 +38,13 @@ export function HeaderComponent({ googleAuthUrl }: IHeaderProps): ReactElement {
 				</Fade>
 
 				<ul className={styles['site-header-menu']}>
-					<li className={styles['site-header-menu-item']}>
-						<button onClick={handleRedirectToLogin} className={styles.login}>
-							Login
-						</button>
-					</li>
+					{googleAuthUrl && (
+						<li className={styles['site-header-menu-item']}>
+							<button onClick={handleRedirectToLogin} className={styles.login}>
+								Login
+							</button>
+						</li>
+					)}
 				</ul>
 			</header>
 		</div>
