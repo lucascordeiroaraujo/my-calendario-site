@@ -15,10 +15,6 @@ interface IHeaderProps {
 export function HeaderComponent({ googleAuthUrl }: IHeaderProps): ReactElement {
 	const { t } = useTranslation('common');
 
-	const handleRedirectToLogin = (): void => {
-		window.location.href = googleAuthUrl || '/';
-	};
-
 	return (
 		<div className="site-container">
 			<header className={styles['site-header']}>
@@ -40,11 +36,25 @@ export function HeaderComponent({ googleAuthUrl }: IHeaderProps): ReactElement {
 				<ul className={styles['site-header-menu']}>
 					{googleAuthUrl && (
 						<li className={styles['site-header-menu-item']}>
-							<button onClick={handleRedirectToLogin} className={styles.login}>
-								Login
-							</button>
+							<a
+								href="https://app.mycalendario.com.br/"
+								title={t('header.menu.login.title')}
+								className={styles.login}
+							>
+								{t('header.menu.login.label')}
+							</a>
 						</li>
 					)}
+
+					<li className={styles['site-header-menu-item']}>
+						<a
+							href="https://app.mycalendario.com.br/?register"
+							title={t('header.menu.register.title')}
+							className={styles.register}
+						>
+							{t('header.menu.register.label')}
+						</a>
+					</li>
 				</ul>
 			</header>
 		</div>

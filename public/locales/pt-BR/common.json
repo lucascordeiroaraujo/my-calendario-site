@@ -5,6 +5,18 @@
 		"title": "Acessar página de cadastro",
 		"text": "Criar minha conta agora"
 	},
+	"header": {
+		"menu": {
+			"login": {
+				"title": "Acessar sua conta",
+				"label": "Login"
+			},
+			"register": {
+				"title": "Crie sua conta",
+				"label": "Cadastrar-se"
+			}
+		}
+	},
 	"footer": {
 		"privacyPolicy": "Política de Privacidade"
 	}

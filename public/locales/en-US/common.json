@@ -5,6 +5,18 @@
 		"title": "Access registration page",
 		"text": "Create my account now"
 	},
+	"header": {
+		"menu": {
+			"login": {
+				"title": "Access your account",
+				"label": "Login"
+			},
+			"register": {
+				"title": "Create your account",
+				"label": "Sign up"
+			}
+		}
+	},
 	"footer": {
 		"privacyPolicy": "Privacy Policy"
 	}

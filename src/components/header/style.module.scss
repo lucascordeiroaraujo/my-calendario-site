@@ -1,9 +1,12 @@
 .site-header {
 	@apply w-full flex justify-between items-center py-6 mb-9;
 	&-menu {
-		@apply flex justify-end items-center;
+		@apply flex justify-end items-center gap-8;
 		&-item {
-			.login {
+			.login:hover {
+				@apply underline;
+			}
+			.register {
 				@apply py-2 px-4 transition-all;
 				@apply text-sm;
 				@apply border border-gray-300 rounded-lg;
