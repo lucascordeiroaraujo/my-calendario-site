@@ -37,7 +37,7 @@ export function HeaderComponent({ googleAuthUrl }: IHeaderProps): ReactElement {
 					{googleAuthUrl && (
 						<li className={styles['site-header-menu-item']}>
 							<a
-								href="https://app.mycalendario.com.br/"
+								href={(process.env.NEXT_APP_URL as string) || ''}
 								title={t('header.menu.login.title')}
 								className={styles.login}
 							>
@@ -48,7 +48,7 @@ export function HeaderComponent({ googleAuthUrl }: IHeaderProps): ReactElement {
 
 					<li className={styles['site-header-menu-item']}>
 						<a
-							href="https://app.mycalendario.com.br/?register"
+							href={`${(process.env.NEXT_APP_URL as string) || ''}/?register`}
 							title={t('header.menu.register.title')}
 							className={styles.register}
 						>

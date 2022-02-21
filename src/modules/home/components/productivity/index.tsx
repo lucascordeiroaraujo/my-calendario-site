@@ -23,10 +23,8 @@ export function ProductivityComponent(): ReactElement {
 
 				<Tada>
 					<a
-						href={(process.env.NEXT_APP_URL as string) || ''}
+						href={`${(process.env.NEXT_APP_URL as string) || ''}/?register`}
 						title={t('button')}
-						target="_blank"
-						rel="noopener noreferrer"
 						className={styles['productivity-btn']}
 					>
 						{t('button')}
