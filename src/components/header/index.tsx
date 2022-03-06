@@ -9,10 +9,14 @@ import Link from 'next/link';
 import styles from './style.module.scss';
 
 interface IHeaderProps {
+	showMenu?: boolean;
 	googleAuthUrl?: string;
 }
 
-export function HeaderComponent({ googleAuthUrl }: IHeaderProps): ReactElement {
+export function HeaderComponent({
+	showMenu = true,
+	googleAuthUrl,
+}: IHeaderProps): ReactElement {
 	const { t } = useTranslation('common');
 
 	return (
@@ -33,29 +37,31 @@ export function HeaderComponent({ googleAuthUrl }: IHeaderProps): ReactElement {
 					</Link>
 				</Fade>
 
-				<ul className={styles['site-header-menu']}>
-					{googleAuthUrl && (
+				{showMenu && (
+					<ul className={styles['site-header-menu']}>
+						{googleAuthUrl && (
+							<li className={styles['site-header-menu-item']}>
+								<a
+									href={(process.env.NEXT_APP_URL as string) || ''}
+									title={t('header.menu.login.title')}
+									className={styles.login}
+								>
+									{t('header.menu.login.label')}
+								</a>
+							</li>
+						)}
+
 						<li className={styles['site-header-menu-item']}>
 							<a
-								href={(process.env.NEXT_APP_URL as string) || ''}
-								title={t('header.menu.login.title')}
-								className={styles.login}
+								href={`${(process.env.NEXT_APP_URL as string) || ''}/?register`}
+								title={t('header.menu.register.title')}
+								className={styles.register}
 							>
-								{t('header.menu.login.label')}
+								{t('header.menu.register.label')}
 							</a>
 						</li>
-					)}
-
-					<li className={styles['site-header-menu-item']}>
-						<a
-							href={`${(process.env.NEXT_APP_URL as string) || ''}/?register`}
-							title={t('header.menu.register.title')}
-							className={styles.register}
-						>
-							{t('header.menu.register.label')}
-						</a>
-					</li>
-				</ul>
+					</ul>
+				)}
 			</header>
 		</div>
 	);

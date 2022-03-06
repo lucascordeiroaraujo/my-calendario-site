@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage(): ReactElement {
 				<title>{t('seo.title')}</title>
 			</Head>
 
-			<HeaderComponent />
+			<HeaderComponent showMenu={false} />
 
 			<PrivacyPolicyComponent />
 		</>
