@@ -1,0 +1,22 @@
+{
+	"title": "Prices",
+	"plans": [
+		{
+			"title": "Beginner",
+			"price": "Free",
+			"itens": ["30 monthly appointments", "60 minute meetings"]
+		},
+		{
+			"title": "Professional",
+			"price": "R$ 29,00 <span>/mo</span>",
+			"itens": [
+				"Unlimited appointments",
+				"Integration with Google Meet",
+				"URL customization",
+				"15, 30 and 60 minute meetings",
+				"Availability configurator"
+			]
+		}
+	],
+	"createAccount": "Create my account now"
+}

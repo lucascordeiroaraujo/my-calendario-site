@@ -1,0 +1,22 @@
+{
+	"title": "Preços",
+	"plans": [
+		{
+			"title": "Iniciante",
+			"price": "Gratuito",
+			"itens": ["30 agendamentos mensais", "Reuniões de 60 minutos"]
+		},
+		{
+			"title": "Profissional",
+			"price": "R$ 29,00 <span>/mês</span>",
+			"itens": [
+				"Agendamentos ilimitados",
+				"Integração com Google Meet",
+				"Personalização da URL",
+				"Reuniões de 15, 30 e 60 minutos",
+				"Configurador de disponibilidade"
+			]
+		}
+	],
+	"createAccount": "Criar minha conta agora"
+}

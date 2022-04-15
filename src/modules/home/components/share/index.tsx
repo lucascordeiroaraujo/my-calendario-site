@@ -36,7 +36,7 @@ export function ShareComponent(): ReactElement {
 				>
 					<div className={styles['share-numbers']}>
 						{i18nNumbers().map(item => (
-							<div className={styles['share-numbers-item']}>
+							<div key={item.title} className={styles['share-numbers-item']}>
 								<strong>
 									<CountUp
 										end={item.total}

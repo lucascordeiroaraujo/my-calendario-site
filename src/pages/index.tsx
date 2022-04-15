@@ -46,6 +46,12 @@ const ShareComponent = dynamic(() =>
 	)
 );
 
+const PriceComponent = dynamic(() =>
+	import('~/modules/home/components/price').then(
+		lib => lib.PriceComponent as any
+	)
+);
+
 export default function IndexPage({
 	googleAuthUrl,
 }: {
@@ -69,6 +75,8 @@ export default function IndexPage({
 
 			<ShareComponent />
 
+			<PriceComponent />
+
 			<FooterComponent />
 		</>
 	);
@@ -89,6 +97,7 @@ export const getStaticProps: GetStaticProps = async ({
 				'homeSchedules',
 				'homeComplex',
 				'homeShare',
+				'homePrice',
 			])),
 		},
 		revalidate: 10,

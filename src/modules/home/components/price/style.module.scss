@@ -1,0 +1,68 @@
+.price {
+	@apply w-full py-36 gap-6;
+	@apply flex justify-center items-start flex-wrap;
+	&-title {
+		@apply w-full mb-12;
+		@apply flex flex-col justify-center items-center;
+		@apply text-4xl font-bold text-center;
+		span {
+			@apply w-20 h-0.5 mt-6;
+			@apply bg-gray-900;
+		}
+	}
+	&-box-plan {
+		@apply w-full max-w-sm overflow-hidden;
+		@apply flex flex-col justify-between items-center;
+		@apply rounded-2xl border-2 border-transparent;
+		@apply bg-gray-50;
+		height: 580px;
+		&.paid-plan {
+			@apply border-rose-500;
+		}
+		.plan {
+			@apply w-full flex flex-col;
+			&-name {
+				@apply w-full py-3 px-2;
+				@apply text-center text-white font-bold;
+				@apply bg-rose-500 bg-opacity-80;
+			}
+			&-price {
+				@apply w-full h-36;
+				@apply flex flex-col justify-center items-center;
+				@apply font-bold text-white;
+				@apply bg-rose-500;
+				span {
+					@apply text-3xl;
+				}
+			}
+			&-itens {
+				@apply w-full py-10 px-12;
+				.item {
+					@apply mb-6 flex items-center gap-2;
+					svg {
+						@apply text-rose-500;
+					}
+				}
+				@media (max-width: theme('screens.sm')) {
+					@apply px-6;
+				}
+			}
+		}
+		&-btn-buy {
+			@apply flex justify-center items-center transition-all px-6 py-3 mb-10;
+			@apply rounded-lg border border-rose-500;
+			@apply font-bold text-center text-base text-white;
+			@apply bg-rose-500;
+			&:hover {
+				@apply border-rose-400;
+				@apply bg-rose-400;
+			}
+		}
+		@media (max-width: theme('screens.md')) {
+			@apply max-w-full h-auto;
+		}
+	}
+	@media (max-width: theme('screens.md')) {
+		@apply py-16;
+	}
+}
