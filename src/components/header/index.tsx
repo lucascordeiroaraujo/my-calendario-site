@@ -1,4 +1,8 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useState } from 'react';
+
+import { FaBars, FaTimes } from 'react-icons/fa';
+
+import OutsideClickHandler from 'react-outside-click-handler';
 
 import Fade from 'react-reveal/Fade';
 
@@ -19,6 +23,23 @@ export function HeaderComponent({
 }: IHeaderProps): ReactElement {
 	const { t } = useTranslation('common');
 
+	const [openedMenuMobile, setOpenedMenuMobile] = useState(false);
+
+	const handleToggleMenuMobile = (): void =>
+		setOpenedMenuMobile(!openedMenuMobile);
+
+	const menuClass = (): string => {
+		const menuClasses = [styles['site-header-menu']];
+
+		if (openedMenuMobile) {
+			menuClasses.push(styles['menu-mobile-opened']);
+		}
+
+		return menuClasses.join(' ');
+	};
+
+	const handleCloseMenuMobile = (): void => setOpenedMenuMobile(false);
+
 	return (
 		<div className="site-container">
 			<header className={styles['site-header']}>
@@ -37,31 +58,47 @@ export function HeaderComponent({
 					</Link>
 				</Fade>
 
-				{showMenu && (
-					<ul className={styles['site-header-menu']}>
-						{googleAuthUrl && (
+				<OutsideClickHandler onOutsideClick={handleCloseMenuMobile}>
+					{!openedMenuMobile ? (
+						<FaBars
+							onClick={handleToggleMenuMobile}
+							className={styles['site-header-menu-mobile']}
+						/>
+					) : (
+						<FaTimes
+							onClick={handleToggleMenuMobile}
+							className={styles['site-header-menu-mobile']}
+						/>
+					)}
+
+					{showMenu && (
+						<ul className={menuClass()}>
+							{googleAuthUrl && (
+								<li className={styles['site-header-menu-item']}>
+									<a
+										href={(process.env.NEXT_APP_URL as string) || ''}
+										title={t('header.menu.login.title')}
+										className={styles.login}
+									>
+										{t('header.menu.login.label')}
+									</a>
+								</li>
+							)}
+
 							<li className={styles['site-header-menu-item']}>
 								<a
-									href={(process.env.NEXT_APP_URL as string) || ''}
-									title={t('header.menu.login.title')}
-									className={styles.login}
+									href={`${
+										(process.env.NEXT_APP_URL as string) || ''
+									}/?register`}
+									title={t('header.menu.register.title')}
+									className={styles.register}
 								>
-									{t('header.menu.login.label')}
+									{t('header.menu.register.label')}
 								</a>
 							</li>
-						)}
-
-						<li className={styles['site-header-menu-item']}>
-							<a
-								href={`${(process.env.NEXT_APP_URL as string) || ''}/?register`}
-								title={t('header.menu.register.title')}
-								className={styles.register}
-							>
-								{t('header.menu.register.label')}
-							</a>
-						</li>
-					</ul>
-				)}
+						</ul>
+					)}
+				</OutsideClickHandler>
 			</header>
 		</div>
 	);
