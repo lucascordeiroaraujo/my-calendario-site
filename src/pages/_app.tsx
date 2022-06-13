@@ -26,6 +26,14 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
 			<Head>
 				<title>myCalendário</title>
 
+				<meta name="author" content="myCalendário" />
+
+				<meta property="og:type" content="website" />
+
+				<meta name="twitter:card" content="summary" />
+
+				<meta name="twitter:creator" content="@mycalendario" />
+
 				<meta name="msapplication-TileColor" content="#FF3877" />
 
 				<meta name="theme-color" content="#FF3877" />

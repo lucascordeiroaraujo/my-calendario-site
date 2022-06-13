@@ -63,6 +63,38 @@ export default function IndexPage({
 		<>
 			<Head>
 				<title>{t('seo.title')}</title>
+
+				<meta name="description" content={t('seo.description')} />
+
+				<link rel="canonical" href="https://www.mycalendario.com.br" />
+
+				<meta name="generator" content={t('seo.description')} />
+
+				<meta name="keywords" content={t('seo.keywords')} />
+
+				<meta property="og:title" content={t('seo.title')} />
+
+				<meta property="og:site_name" content={t('seo.title')} />
+
+				<meta property="og:url" content="https://www.mycalendario.com.br" />
+
+				<meta property="og:image" content="/images/social.png" />
+
+				<meta property="og:description" content={t('seo.description')} />
+
+				<meta name="twitter:title" content={t('seo.title')} />
+
+				<meta name="twitter:url" content="https://www.mycalendario.com.br" />
+
+				<meta name="twitter:image:src" content="/images/social.png" />
+
+				<meta name="twitter:description" content={t('seo.description')} />
+
+				<meta itemProp="name" content={t('seo.title')} />
+
+				<meta itemProp="description" content={t('seo.description')} />
+
+				<meta itemProp="image" content="/images/social.png" />
 			</Head>
 
 			<HeaderComponent googleAuthUrl={googleAuthUrl} />
