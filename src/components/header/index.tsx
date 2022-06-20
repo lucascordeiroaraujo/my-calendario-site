@@ -76,7 +76,9 @@ export function HeaderComponent({
 							{googleAuthUrl && (
 								<li className={styles['site-header-menu-item']}>
 									<a
-										href={(process.env.NEXT_APP_URL as string) || ''}
+										href={`${(process.env.NEXT_APP_URL as string) || ''}/${t(
+											'loginLink'
+										)}`}
 										title={t('header.menu.login.title')}
 										className={styles.login}
 									>
@@ -87,9 +89,9 @@ export function HeaderComponent({
 
 							<li className={styles['site-header-menu-item']}>
 								<a
-									href={`${
-										(process.env.NEXT_APP_URL as string) || ''
-									}/?register`}
+									href={`${(process.env.NEXT_APP_URL as string) || ''}/${t(
+										'registerLink'
+									)}`}
 									title={t('header.menu.register.title')}
 									className={styles.register}
 								>

@@ -53,7 +53,9 @@ export function SectionDescriptionComponent({
 				<div className={styles['info-container-create-account-container']}>
 					<Tada>
 						<a
-							href={`${(process.env.NEXT_APP_URL as string) || ''}/?register`}
+							href={`${(process.env.NEXT_APP_URL as string) || ''}/${t(
+								'registerLink'
+							)}`}
 							title={t('createAccount.title')}
 							className={styles['create-account']}
 						>

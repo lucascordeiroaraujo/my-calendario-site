@@ -19,5 +19,7 @@
 	},
 	"footer": {
 		"privacyPolicy": "Privacy Policy"
-	}
+	},
+	"registerLink": "en-US?register",
+	"loginLink": "en-US"
 }

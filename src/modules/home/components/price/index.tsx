@@ -9,19 +9,19 @@ import { useTranslation } from 'next-i18next';
 import styles from './style.module.scss';
 
 export function PriceComponent(): ReactElement {
-	const { t } = useTranslation('homePrice');
+	const { t } = useTranslation(['common', 'homePrice']);
 
 	const i18nPlans = (): Array<{
 		title: string;
 		price: string;
 		itens: Array<string>;
-	}> => t('plans', { returnObjects: true });
+	}> => t('plans', { returnObjects: true, ns: 'homePrice' });
 
 	return (
 		<div className="site-container">
 			<section className={styles.price}>
 				<h1 className={styles['price-title']}>
-					{t('title')}
+					{t('title', { ns: 'homePrice' })}
 
 					<span />
 				</h1>
@@ -46,10 +46,13 @@ export function PriceComponent(): ReactElement {
 							</div>
 
 							<a
-								href={`${(process.env.NEXT_APP_URL as string) || ''}/?register`}
+								href={`${(process.env.NEXT_APP_URL as string) || ''}/${t(
+									'registerLink',
+									{ ns: 'common' }
+								)}`}
 								className={styles['price-box-plan-btn-buy']}
 							>
-								{t('createAccount')}
+								{t('createAccount', { ns: 'homePrice' })}
 							</a>
 						</article>
 					</Fade>
