@@ -52,7 +52,7 @@ const PriceComponent = dynamic(() =>
 	)
 );
 
-export default function calendlyPage({
+export default function CalendlyPage({
 	googleAuthUrl,
 }: {
 	googleAuthUrl: string;
